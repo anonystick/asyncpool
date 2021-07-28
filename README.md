@@ -1,4 +1,5 @@
-# asyncpool
+## asyncpool
+```js
 function asyncPool(poolLimit, array, iteratorFn) {
   let i = 0;
   const ret = []; // Lưu trữ tất cả các tác vụ không đồng bộ
@@ -28,9 +29,10 @@ function asyncPool(poolLimit, array, iteratorFn) {
   };
   return enqueue().then(() => Promise.all(ret));
 }
+```
 
-
-
+## use 
+```js
 const timeout = i => new Promise(resolve => setTimeout(() => {
   console.log("::::Giai quyet xong thang nay:::::", i)
   resolve(i)
@@ -42,7 +44,5 @@ async function asyncCall() {
    })
 }
 
-
-
-
 asyncCall();
+```
